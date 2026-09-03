@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "EduManage"
+description = "A responsive student management dashboard for educational organizations, with attendance, academic progress, deadlines, and voice-friendly quick actions."
+version = "1.0.0"
+id = "artifacts/edumanage"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 20185
+
+[services.development]
+run = "pnpm --filter @workspace/edumanage run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/edumanage", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/edumanage/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "20185"
+BASE_PATH = "/"

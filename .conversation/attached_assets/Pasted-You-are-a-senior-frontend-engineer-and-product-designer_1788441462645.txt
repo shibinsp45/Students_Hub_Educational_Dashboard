@@ -1,0 +1,1197 @@
+You are a senior frontend engineer and product designer.
+
+Build a production-quality Student Management Dashboard web application based on the attached reference image.
+
+REFERENCE:
+Use the attached dashboard screenshot as the primary visual reference for:
+- Overall layout
+- Sidebar structure
+- Header
+- Card styling
+- Spacing
+- Typography hierarchy
+- Border radius
+- Charts
+- Tables/lists
+- Color treatment
+- Visual density
+- Navigation behavior
+
+IMPORTANT:
+Do NOT make an exact pixel-for-pixel clone of the reference.
+Use the reference as the visual foundation, but redesign the content and information architecture specifically for a modern Student Management System.
+
+The application should feel like a real SaaS/admin product that could be used by a college, training institute, university, or educational organization.
+
+==================================================
+1. TECH STACK
+==================================================
+
+Use:
+
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- Lucide React icons
+- Recharts for charts
+- React Router
+- Modern component architecture
+
+Keep the code clean, modular and maintainable.
+
+Create reusable components instead of putting everything into one file.
+
+Suggested structure:
+
+src/
+  components/
+    layout/
+    dashboard/
+    students/
+    attendance/
+    projects/
+    assignments/
+    exams/
+    reports/
+    common/
+
+  pages/
+    Dashboard.tsx
+    Students.tsx
+    StudentDetails.tsx
+    Attendance.tsx
+    Projects.tsx
+    Assignments.tsx
+    Exams.tsx
+    Timetable.tsx
+    Reports.tsx
+    Settings.tsx
+
+  data/
+    students.ts
+    projects.ts
+    attendance.ts
+    assignments.ts
+
+  types/
+    index.ts
+
+  layouts/
+    DashboardLayout.tsx
+
+  App.tsx
+  main.tsx
+
+==================================================
+2. PRODUCT NAME
+==================================================
+
+Use:
+
+EduManage
+
+Subtitle:
+
+Student Management System
+
+The dashboard should display:
+
+"Hi, Faseela, Welcome Back!"
+
+Subtitle:
+
+"Here's what's happening with your students today."
+
+==================================================
+3. MAIN LAYOUT
+==================================================
+
+Create a desktop-first admin dashboard.
+
+Overall layout:
+
+LEFT SIDEBAR
++
+TOP HEADER
++
+MAIN CONTENT
+
+Sidebar width:
+Approximately 250–260px.
+
+Sidebar background:
+Very dark navy / near-black blue.
+
+Main background:
+Very light gray / off-white.
+
+Use generous spacing.
+
+Cards should have:
+- White background
+- Subtle border
+- Small shadow
+- 12–16px radius
+- Clean spacing
+
+Avoid excessive shadows.
+
+==================================================
+4. SIDEBAR
+==================================================
+
+Create the following navigation:
+
+Dashboard
+Students
+Attendance
+Projects
+Assignments
+Exams & Grades
+Timetable
+Messages
+Events
+Reports
+Settings
+
+Each navigation item should have:
+
+- Lucide icon
+- Label
+- Active state
+- Hover state
+
+Active item:
+Use a blue/purple gradient or strong blue background.
+
+Sidebar top:
+
+EduManage
+Student Management
+
+At the bottom create user profile:
+
+Faseela
+Admin
+Department of Design
+
+Include:
+- Avatar
+- Online indicator
+- Dropdown icon
+
+Sidebar should support collapsed state.
+
+When collapsed:
+- Hide labels
+- Keep icons
+- Preserve tooltips
+
+==================================================
+5. TOP HEADER
+==================================================
+
+Header should include:
+
+Left:
+Sidebar collapse button.
+
+Right:
+
+Department selector:
+"All Departments"
+
+Notification icon
+
+Fullscreen icon
+
+Settings icon
+
+Keep header height around 64–72px.
+
+Use subtle border-bottom.
+
+==================================================
+6. DASHBOARD
+==================================================
+
+Create a dashboard with the following KPI cards.
+
+ROW 1:
+
+1. Total Students
+184
++12%
+
+2. Present Today
+127
++8%
+
+3. Total Projects
+45
++15%
+
+4. Assignments Due
+12
+-5%
+
+ROW 2:
+
+5. Attendance Average
+88%
++6%
+
+6. Pending Projects
+18
+-3%
+
+7. Overdue Tasks
+7
+-12%
+
+8. Upcoming Exams
+5
+0%
+
+Each card should contain:
+
+- Colored icon container
+- Label
+- Large metric
+- Trend percentage
+- Trend icon
+- Small contextual text where appropriate
+
+Use different accent colors but keep them within a professional design system.
+
+==================================================
+7. ATTENDANCE OVERVIEW
+==================================================
+
+Create a large chart card.
+
+Title:
+
+Attendance Overview
+
+Controls:
+
+Present
+Absent
+
+Dropdown:
+
+This Week
+
+Chart:
+
+Bar chart showing:
+
+Monday
+Tuesday
+Wednesday
+Thursday
+Friday
+Saturday
+Sunday
+
+Display:
+
+Present students
+Absent students
+
+Use Recharts.
+
+Add:
+
+View Details
+
+Make the chart responsive.
+
+==================================================
+8. TODAY'S ATTENDANCE
+==================================================
+
+Create a right-side card:
+
+Title:
+
+Today's Attendance
+
+View All
+
+Display student list.
+
+Example:
+
+Sana Ali
+B.Des · Sem 4
+Present
+
+Muhammed Rishad
+BCA · Sem 4
+Present
+
+Ayesha Afreen
+B.Des · Sem 4
+Absent
+
+Naveen Shaji
+BCA · Sem 4
+Present
+
+Anagha K
+B.Des · Sem 4
+Present
+
+Use avatar initials.
+
+Status badges:
+
+Present
+Absent
+Late
+
+Make the list scrollable if necessary.
+
+==================================================
+9. PROJECT PROGRESS
+==================================================
+
+Create a project analytics card.
+
+Title:
+
+Project Progress
+
+View All
+
+Use a donut chart.
+
+Data:
+
+Completed: 18
+In Progress: 20
+Pending: 7
+
+Total:
+45 Projects
+
+Show:
+
+Completed 40%
+In Progress 44%
+Pending 16%
+
+Use Recharts.
+
+==================================================
+10. UPCOMING DEADLINES
+==================================================
+
+Create a card:
+
+Title:
+
+Upcoming Deadlines
+
+View All
+
+Items:
+
+UI/UX Case Study
+B.Des · Sem 4
+May 26
+
+User Research Report
+B.Des · Sem 4
+May 28
+
+Prototype Submission
+BCA · Sem 4
+May 31
+
+Final Presentation
+B.Des · Sem 4
+June 02
+
+Each item should contain:
+- Icon
+- Project/assignment title
+- Course
+- Due date
+- Status color
+
+==================================================
+11. RECENT ACTIVITY
+==================================================
+
+Create a Recent Activities card.
+
+Example activities:
+
+Sana Ali marked present
+10:00 AM
+
+New project "Mobile App Design" created
+Yesterday
+
+Assignment "Wireframe Design" submitted by 12 students
+May 22
+
+Muhammed Rishad uploaded a new file
+May 21
+
+Exam "Design Principles" scheduled
+May 20
+
+Use activity icons.
+
+==================================================
+12. STUDENTS PAGE
+==================================================
+
+Create a complete Students management page.
+
+Header:
+
+Students
+
+Subtitle:
+
+Manage student profiles, academic information and performance.
+
+Top controls:
+
+Search students
+
+Department filter
+
+Semester filter
+
+Status filter
+
+Add Student button
+
+Create table:
+
+Student ID
+Student
+Department
+Semester
+Attendance
+Projects
+Performance
+Status
+Actions
+
+Example:
+
+STU001
+Sana Ali
+B.Des
+Sem 4
+94%
+4/5
+Excellent
+Active
+
+Include:
+- Search
+- Filters
+- Pagination
+- Sort
+- Bulk selection
+- Export button
+
+Actions:
+
+View
+Edit
+Delete
+
+==================================================
+13. STUDENT DETAILS PAGE
+==================================================
+
+Clicking a student should open:
+
+/students/:id
+
+Create a complete student profile.
+
+Header:
+
+Student avatar
+
+Sana Ali
+
+STU001
+
+B.Des · Semester 4
+
+Active
+
+Actions:
+
+Edit Student
+Message
+Download Report
+
+Create tabs:
+
+Overview
+Attendance
+Projects
+Assignments
+Exams
+Documents
+
+Overview should contain:
+
+Personal Information
+
+Full Name
+Email
+Phone
+Date of Birth
+Gender
+Address
+
+Academic Information
+
+Student ID
+Department
+Course
+Semester
+Batch
+Enrollment Date
+
+Performance:
+
+Attendance
+Assignments
+Projects
+Average Grade
+
+==================================================
+14. ATTENDANCE PAGE
+==================================================
+
+Create a complete attendance management interface.
+
+Header:
+
+Attendance
+
+Controls:
+
+Date selector
+Department
+Course
+Semester
+Batch
+
+Summary cards:
+
+Total Students
+Present
+Absent
+Late
+Attendance %
+
+Create attendance table:
+
+Student
+ID
+Department
+Present Days
+Absent Days
+Attendance %
+Status
+
+Add:
+
+Mark Attendance
+
+button.
+
+Allow status:
+
+Present
+Absent
+Late
+Leave
+
+Include attendance analytics:
+
+Weekly attendance
+Monthly attendance
+Department comparison
+
+==================================================
+15. PROJECT TRACKING
+==================================================
+
+Create:
+
+Projects
+
+Header controls:
+
+Search
+Department
+Semester
+Status
+Project type
+
+Add Project button.
+
+Project cards/table should show:
+
+Project name
+Student
+Course
+Start date
+Deadline
+Progress
+Status
+Mentor
+
+Statuses:
+
+Not Started
+In Progress
+Review
+Completed
+Overdue
+
+Progress bars:
+
+0–100%
+
+Clicking a project should open:
+
+Project Details
+
+Show:
+
+Project overview
+Student
+Mentor
+Timeline
+Tasks
+Files
+Comments
+Progress
+Deadline
+
+==================================================
+16. ASSIGNMENTS
+==================================================
+
+Create Assignment Management.
+
+Show:
+
+Assignment title
+Course
+Assigned students
+Submission rate
+Deadline
+Status
+
+Status:
+
+Upcoming
+Active
+Submitted
+Overdue
+
+Include:
+
+Create Assignment
+
+button.
+
+==================================================
+17. EXAMS & GRADES
+==================================================
+
+Create exam management.
+
+Show:
+
+Exam
+Subject
+Department
+Semester
+Date
+Students
+Status
+
+Create grade table:
+
+Student
+Subject
+Marks
+Grade
+Percentage
+
+Support grades:
+
+A+
+A
+B+
+B
+C
+D
+F
+
+Add simple performance chart.
+
+==================================================
+18. TIMETABLE
+==================================================
+
+Create weekly timetable.
+
+Columns:
+
+Monday
+Tuesday
+Wednesday
+Thursday
+Friday
+
+Rows:
+
+9:00
+10:00
+11:00
+12:00
+1:00
+2:00
+3:00
+4:00
+
+Each class card should show:
+
+Subject
+Faculty
+Room
+
+==================================================
+19. REPORTS
+==================================================
+
+Create reports dashboard.
+
+Report categories:
+
+Student Performance
+Attendance
+Project Progress
+Assignment Submission
+Exam Performance
+
+Provide:
+
+Generate Report
+
+Export PDF
+
+Export CSV
+
+Buttons.
+
+Charts:
+
+Attendance trend
+Student performance
+Project completion
+Department comparison
+
+==================================================
+20. SETTINGS
+==================================================
+
+Create settings page with:
+
+Profile
+Account
+Notifications
+Appearance
+Departments
+Courses
+Academic Year
+
+Use a clean settings layout with left-side tabs.
+
+==================================================
+21. SEARCH
+==================================================
+
+Global search should allow searching:
+
+Students
+Projects
+Assignments
+Exams
+
+Create a command-palette style search experience.
+
+Shortcut:
+
+Ctrl + K
+
+==================================================
+22. RESPONSIVE DESIGN
+==================================================
+
+Desktop:
+1440px+
+Full sidebar.
+
+Tablet:
+768px–1439px
+Compact sidebar.
+
+Mobile:
+Below 768px
+
+Use:
+
+- Mobile navigation drawer
+- Responsive cards
+- Horizontally scrollable tables
+- Stacked dashboard sections
+- Bottom/mobile navigation where appropriate
+
+Do NOT simply shrink the desktop interface.
+
+Adapt the information hierarchy for mobile.
+
+==================================================
+23. DESIGN SYSTEM
+==================================================
+
+Use a professional education SaaS design system.
+
+Primary:
+Blue / Indigo
+
+Secondary:
+Purple
+
+Success:
+Green
+
+Warning:
+Orange
+
+Danger:
+Red
+
+Info:
+Cyan
+
+Background:
+#F6F7FB-style neutral
+
+Cards:
+White
+
+Text:
+Dark navy
+
+Muted text:
+Gray
+
+Typography:
+
+Use Inter or a similar modern sans-serif.
+
+Hierarchy:
+
+Page title:
+28–32px
+
+Section title:
+18–20px
+
+Card title:
+14–16px
+
+Body:
+13–14px
+
+Small:
+11–12px
+
+Font weights:
+
+400
+500
+600
+700
+
+Spacing:
+
+Use an 8px spacing system.
+
+Examples:
+
+8px
+16px
+24px
+32px
+40px
+
+Border radius:
+
+Small:
+8px
+
+Cards:
+12–16px
+
+Buttons:
+8–10px
+
+==================================================
+24. ACCESSIBILITY
+==================================================
+
+Follow WCAG-friendly practices.
+
+Requirements:
+
+- Semantic HTML
+- Keyboard navigation
+- Visible focus states
+- Accessible labels
+- Proper button elements
+- ARIA only where needed
+- Sufficient color contrast
+- Do not rely only on color for status
+- Tooltips for collapsed sidebar icons
+- Accessible modal dialogs
+- Accessible dropdowns
+- Accessible tables
+
+==================================================
+25. INTERACTIONS
+==================================================
+
+Make the application functional.
+
+Implement:
+
+- Sidebar navigation
+- Page routing
+- Search
+- Filters
+- Dropdowns
+- Modals
+- Add student modal
+- Edit student modal
+- Delete confirmation
+- Attendance marking
+- Project status updates
+- Progress updates
+- Tab navigation
+- Notifications panel
+- Student detail navigation
+- Pagination
+- Sorting
+- Dark mode
+
+Use local mock data.
+
+No backend is required initially.
+
+Structure the code so an API/backend can easily be connected later.
+
+==================================================
+26. DARK MODE
+==================================================
+
+Implement light and dark themes.
+
+Dark mode should not simply invert colors.
+
+Use a proper dark design system:
+
+Dark background
+Dark cards
+Light text
+Muted secondary text
+Accessible borders
+Accessible chart colors
+
+Store theme preference locally.
+
+==================================================
+27. DATA
+==================================================
+
+Create realistic mock data for at least:
+
+30 students
+
+10 projects
+
+15 assignments
+
+10 exams
+
+Multiple departments:
+
+B.Des
+BCA
+B.Tech
+MCA
+
+Semesters:
+
+Sem 1
+Sem 2
+Sem 3
+Sem 4
+Sem 5
+Sem 6
+Sem 7
+Sem 8
+
+Use realistic Indian student names and academic data.
+
+==================================================
+28. VISUAL QUALITY
+==================================================
+
+The final UI should feel:
+
+Modern
+Professional
+Minimal
+Premium
+Academic
+SaaS-like
+Data-driven
+
+Avoid:
+
+- Excessive gradients
+- Glassmorphism
+- Huge typography
+- Excessive rounded elements
+- Decorative illustrations
+- Unnecessary animations
+- Cluttered dashboards
+
+The design should prioritize information hierarchy and usability.
+
+==================================================
+29. MICRO INTERACTIONS
+==================================================
+
+Use subtle animations:
+
+- Button hover
+- Card hover where appropriate
+- Sidebar transition
+- Modal opening
+- Dropdown opening
+- Progress animation
+- Chart animation
+- Toast notifications
+
+Keep animations fast and professional.
+
+Respect:
+
+prefers-reduced-motion
+
+==================================================
+30. DASHBOARD INFORMATION HIERARCHY
+==================================================
+
+The most important information should appear first:
+
+1. Student count
+2. Attendance
+3. Academic/project performance
+4. Upcoming deadlines
+5. Student activity
+
+The dashboard should allow an administrator to understand the health of the student population within 5–10 seconds.
+
+==================================================
+31. IMPORTANT PRODUCT THINKING
+==================================================
+
+Do not treat this as just a dashboard UI.
+
+Think like a real Student Management System.
+
+An administrator should be able to answer:
+
+- How many students do we have?
+- Who is absent today?
+- Which students have poor attendance?
+- Which projects are overdue?
+- Which students are performing poorly?
+- Which assignments are pending?
+- Which exams are coming up?
+- Which students need attention?
+- Which departments are performing better?
+- What changed recently?
+
+Create the UI around these questions.
+
+==================================================
+32. FINAL REQUIREMENTS
+==================================================
+
+Build the complete application.
+
+Do not create only the dashboard.
+
+Routes should include:
+
+/dashboard
+/students
+/students/:id
+/attendance
+/projects
+/projects/:id
+/assignments
+/exams
+/timetable
+/messages
+/events
+/reports
+/settings
+
+Ensure:
+
+- No broken routes
+- No console errors
+- No placeholder lorem ipsum
+- No empty pages
+- No dead buttons
+- All major interactions should work
+- Responsive design
+- Clean component architecture
+- Reusable UI components
+- Realistic mock data
+
+Start by creating the application shell and design system.
+
+Then implement the dashboard.
+
+Then implement the remaining pages.
+
+Finally verify all routes and interactions.
