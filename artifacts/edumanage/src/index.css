@@ -42,68 +42,68 @@
 }
 
 :root {
-  --background: 43 38% 96%;
-  --foreground: 194 36% 17%;
-  --border: 42 24% 86%;
-  --input: 42 24% 86%;
-  --ring: 174 58% 35%;
-  --card: 42 30% 99%;
-  --card-foreground: 194 36% 17%;
-  --card-border: 42 24% 88%;
-  --popover: 42 30% 99%;
-  --popover-foreground: 194 36% 17%;
-  --popover-border: 42 24% 86%;
-  --primary: 174 58% 35%;
-  --primary-foreground: 42 38% 96%;
-  --secondary: 186 42% 91%;
-  --secondary-foreground: 194 36% 17%;
-  --muted: 42 22% 92%;
-  --muted-foreground: 194 16% 47%;
-  --accent: 25 87% 64%;
-  --accent-foreground: 194 36% 17%;
-  --destructive: 2 68% 54%;
-  --destructive-foreground: 42 38% 96%;
+  --background: 0 0% 100%;
+  --foreground: 0 0% 9%;
+  --border: 0 0% 87%;
+  --input: 0 0% 87%;
+  --ring: 342 82% 52%;
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 9%;
+  --card-border: 0 0% 87%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 9%;
+  --popover-border: 0 0% 87%;
+  --primary: 0 0% 9%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 0 0% 93%;
+  --secondary-foreground: 0 0% 9%;
+  --muted: 0 0% 95%;
+  --muted-foreground: 0 0% 42%;
+  --accent: 342 82% 52%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 342 82% 52%;
+  --destructive-foreground: 0 0% 100%;
   --app-font-sans: 'DM Sans', sans-serif;
   --app-font-mono: 'Space Mono', monospace;
   --radius: 0.85rem;
-  --sidebar: 193 42% 21%;
-  --sidebar-foreground: 42 38% 96%;
-  --sidebar-border: 193 30% 31%;
-  --sidebar-primary: 25 87% 64%;
-  --sidebar-primary-foreground: 194 36% 17%;
-  --sidebar-accent: 193 33% 28%;
-  --sidebar-accent-foreground: 42 38% 96%;
+  --sidebar: 0 0% 8%;
+  --sidebar-foreground: 0 0% 96%;
+  --sidebar-border: 0 0% 20%;
+  --sidebar-primary: 0 0% 100%;
+  --sidebar-primary-foreground: 0 0% 8%;
+  --sidebar-accent: 0 0% 18%;
+  --sidebar-accent-foreground: 0 0% 96%;
 }
 
 .dark {
-  --background: 195 31% 11%;
-  --foreground: 42 30% 92%;
-  --border: 195 22% 23%;
-  --input: 195 22% 23%;
-  --ring: 174 58% 51%;
-  --card: 195 28% 15%;
-  --card-foreground: 42 30% 92%;
-  --card-border: 195 22% 24%;
-  --popover: 195 28% 15%;
-  --popover-foreground: 42 30% 92%;
-  --popover-border: 195 22% 24%;
-  --primary: 174 58% 51%;
-  --primary-foreground: 195 31% 11%;
-  --secondary: 195 25% 22%;
-  --secondary-foreground: 42 30% 92%;
-  --muted: 195 22% 20%;
-  --muted-foreground: 195 12% 65%;
-  --accent: 25 87% 65%;
-  --accent-foreground: 195 31% 11%;
-  --destructive: 2 65% 59%;
-  --destructive-foreground: 42 30% 92%;
-  --sidebar: 195 34% 9%;
-  --sidebar-foreground: 42 30% 92%;
-  --sidebar-border: 195 22% 20%;
-  --sidebar-primary: 25 87% 65%;
-  --sidebar-primary-foreground: 195 31% 11%;
-  --sidebar-accent: 195 25% 17%;
-  --sidebar-accent-foreground: 42 30% 92%;
+  --background: 0 0% 5%;
+  --foreground: 0 0% 96%;
+  --border: 0 0% 20%;
+  --input: 0 0% 20%;
+  --ring: 342 82% 62%;
+  --card: 0 0% 9%;
+  --card-foreground: 0 0% 96%;
+  --card-border: 0 0% 20%;
+  --popover: 0 0% 9%;
+  --popover-foreground: 0 0% 96%;
+  --popover-border: 0 0% 20%;
+  --primary: 0 0% 100%;
+  --primary-foreground: 0 0% 5%;
+  --secondary: 0 0% 17%;
+  --secondary-foreground: 0 0% 96%;
+  --muted: 0 0% 15%;
+  --muted-foreground: 0 0% 68%;
+  --accent: 342 82% 62%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 342 82% 62%;
+  --destructive-foreground: 0 0% 5%;
+  --sidebar: 0 0% 2%;
+  --sidebar-foreground: 0 0% 96%;
+  --sidebar-border: 0 0% 16%;
+  --sidebar-primary: 0 0% 100%;
+  --sidebar-primary-foreground: 0 0% 2%;
+  --sidebar-accent: 0 0% 12%;
+  --sidebar-accent-foreground: 0 0% 96%;
 }
 
 @layer base {
@@ -116,7 +116,7 @@
 @layer utilities {
   .font-mono { font-family: var(--app-font-mono); }
   .app-shell { background: radial-gradient(circle at 80% 0%, hsl(var(--accent) / .08), transparent 30rem), hsl(var(--background)); }
-  .card-surface { background: hsl(var(--card) / .78); border: 1px solid hsl(var(--card-border)); box-shadow: 0 10px 30px hsl(193 30% 18% / .045); }
+  .card-surface { background: hsl(var(--card) / .78); border: 1px solid hsl(var(--card-border)); box-shadow: 0 10px 30px hsl(0 0% 0% / .14); }
   .soft-grid { background-image: linear-gradient(hsl(var(--primary) / .035) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--primary) / .035) 1px, transparent 1px); background-size: 24px 24px; }
   .focus-ring:focus-visible { outline: 3px solid hsl(var(--accent) / .55); outline-offset: 2px; }
   .interactive { transition: transform .18s ease, background-color .18s ease, border-color .18s ease, opacity .18s ease; }

@@ -1,10 +1,10 @@
-# EduManage
+# Students Hub
 
-EduManage is a responsive student management dashboard for tracking learners, attendance, academic work, deadlines, and campus activity.
+Students Hub is a responsive student management dashboard for tracking learners, attendance, academic work, deadlines, and campus activity.
 
 ## Run & Operate
 
-- `pnpm --filter @workspace/edumanage run dev` — run the EduManage web app
+- `pnpm --filter @workspace/edumanage run dev` — run the Students Hub web app
 - `pnpm --filter @workspace/edumanage run typecheck` — typecheck the web app
 - `pnpm run typecheck` — full typecheck across all packages
 
